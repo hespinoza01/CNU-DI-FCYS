@@ -1,0 +1,102 @@
+:root{
+  --primary: #fff;
+  --primary-variant: #e9f1f7;
+  --secondary: #003485;
+  --secondary-variant: #001862;
+  --secondary-alpha: rgba(0, 52, 133, .15);
+
+  --text: #7F868B;
+  --text-variant: #595959;
+
+  --body-color: #EFF3F6;
+  --shadow-color: #696969;
+  --border-color: #E1E1E1;
+  --border-color--darker: #a5a5a5;
+
+  --border: 2px solid var(--border-color);
+  --border-bottom: 3px solid var(--border-color);
+  --border-secondary: 2px solid var(--shadow-color);
+  --box-shadow: 1px 0 7px -4px var(--shadow-color);
+
+  --padding: .75rem;
+  --bradius: 7px;
+  --brounded: 100px;
+}
+
+html, body, *, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: GoogleSans;
+  font-size: 16px;
+  line-height: 2;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  grid-template-rows: 10vh 100%;
+  grid-template-areas: 'aside header' 'aside main';
+  grid-row-gap: 5px;
+
+  background-color: var(--body-color);
+}
+
+ul{ list-style: none; }
+
+.header{
+  grid-area: header;
+  background-color: var(--primary);
+  box-shadow: var(--box-shadow);
+}
+
+.aside{
+  grid-area: aside;
+  max-height: 100vh;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+}
+.logo__src{
+  display: block;
+  width: 25%;
+}
+
+.nav{
+  height: calc(100% - 10vh);
+  max-height: calc(100% - 10vh);;
+  background-color: var(--primary);
+  padding: var(--padding);
+  overflow-y: auto;
+}
+
+.tab{
+  color: var(--secondary);
+  background-color: inherit;
+  cursor: default;
+  padding-left: 1.5rem;
+  border-left: 3.5px solid transparent;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateX(-.75rem);
+  transition: background-color .3s;
+}
+.tab:hover, .tab.active{ border-color: var(--secondary); }
+.tab.active{
+  background-color: var(--secondary-alpha);
+  color: var(--secondary-variant);
+}
+
+.main{
+  grid-area: main;
+}
