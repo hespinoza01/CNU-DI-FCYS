@@ -31,7 +31,7 @@ html, body, *, *::after, *::before {
 
 body {
   font-family: GoogleSans;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 2;
   min-height: 100vh;
 
@@ -97,19 +97,20 @@ ul{ list-style: none; }
   height: calc(100% - 10vh);
   max-height: calc(100% - 10vh);;
   background-color: var(--primary);
-  padding: var(--padding);
+  padding: var(--padding) 0;
   overflow-y: auto;
 }
+
+.nav .menu__title{ padding-left: .5rem; }
 
 .tab{
   color: var(--secondary);
   background-color: inherit;
   cursor: default;
-  padding-left: 1.5rem;
+  padding-left: .75rem;
   border-left: 3.5px solid transparent;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  transform: translateX(-.75rem);
   transition: background-color .3s;
 }
 .tab:hover, .tab.active{ border-color: var(--secondary); }
