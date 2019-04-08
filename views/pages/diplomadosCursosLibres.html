@@ -1,0 +1,46 @@
+{% macro pageDiplomadosCursosLibres() %}
+  <template id="pageDiplomadosCursosLibres">
+    <section class="page">
+      <nav class="page-nav">
+        <button class="page-nav__tab active" id="diplomadosTab">Diplomados</button>
+        <button class="page-nav__tab" id="cursosLibresTab">Cursos libres</button>
+      </nav>
+
+      <div class="page-nav__container">
+        <button class="btnAddNew btn"></button>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Total</th>
+                <th>M</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Some name</td>
+                <td>100</td>
+                <td>50</td>
+                <td><a href="#">editar</a></td>
+              </tr>
+              <tr>
+                  <td>Some name</td>
+                  <td>100</td>
+                  <td>50</td>
+                  <td><a href="#">editar</a></td>
+              </tr>
+              <tr>
+                  <td>Some name</td>
+                  <td>100</td>
+                  <td>50</td>
+                  <td><a href="#">editar</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </template>
+{% endmacro %}

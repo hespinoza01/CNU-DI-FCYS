@@ -4,6 +4,7 @@
   --secondary: #003485;
   --secondary-variant: #001862;
   --secondary-alpha: rgba(0, 52, 133, .20);
+  --secondary-alpha-variant: rgba(0, 52, 133, .1);
 
   --text: #7F868B;
   --text-variant: #595959;
@@ -99,6 +100,7 @@ ul{ list-style: none; }
   background-color: var(--primary);
   padding: var(--padding) 0;
   overflow-y: auto;
+  border-right: 1px solid var(--border-color);
 }
 
 .nav .menu__title{ padding-left: .5rem; }
@@ -121,4 +123,94 @@ ul{ list-style: none; }
 
 .main{
   grid-area: main;
+}
+
+
+/*
+**    Pages's style's
+*/
+.page{
+  display: grid;
+  grid-template-rows: 41px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'page-nav' 'page-container';
+  height: 100%;
+}
+.page-nav{
+  grid-area: page-nav;
+  padding: 0 1rem;
+}
+
+.page-nav__tab{
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--text);
+  border-bottom: 2px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1.05rem;
+}
+.page-nav__tab.active{
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.page-nav__container{
+  grid-area: page-container;
+  width: 100%;
+  max-height: 100%;
+  padding:1rem;
+  background-color: var(--primary);
+  overflow-y: auto;
+}
+
+
+/*
+**  Table's style
+*/
+.table-wrapper{
+  overflow: hidden;
+  width: 50vw;
+  margin: 0 auto;
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+}
+table{
+  width: inherit;
+  border-collapse: collapse;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+thead{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+td, th{
+  padding: .05rem .5rem;
+  text-align: center;
+  font-size: 14px;
+}
+td a{
+  color: var(--text);
+}
+tbody tr:nth-child(even){
+  background-color: var(--secondary-alpha-variant);
+}
+
+
+.btn{
+  display: block;
+  border: none;
+  outline: none;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: bold;
+  padding:.5rem 1rem;
+  border-radius: var(--bradius);
 }
