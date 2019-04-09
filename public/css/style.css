@@ -4,7 +4,7 @@
   --secondary: #003485;
   --secondary-variant: #001862;
   --secondary-alpha: rgba(0, 52, 133, .20);
-  --secondary-alpha-variant: rgba(201, 201, 0, .25); /*rgba(0, 52, 133, .1);*/
+  --secondary-alpha-variant: rgba(0, 52, 133, .1); /*rgba(201, 201, 0, .25);*/
 
   --text: #7F868B;
   --text-variant: #595959;
@@ -172,8 +172,7 @@ ul{ list-style: none; }
 .table-wrapper{
   overflow: hidden;
   width: 50vw;
-  margin: 0 auto;
-  margin-top: 1rem;
+  margin: 1rem auto;
   box-shadow: var(--box-shadow);
   border-radius: 5px;
 }

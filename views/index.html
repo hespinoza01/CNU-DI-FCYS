@@ -3,6 +3,10 @@
 {% from 'pages/investigaciones.html' import pageInvestigaciones %}
 {% from 'pages/financiamiento.html' import pageFinanciamiento %}
 {% from 'pages/unidadAcademica.html' import pageUnidadAcademica %}
+{% from 'pages/pageProfesor.html' import pageProfesor %}
+{% from 'pages/dosificacionHoraria.html' import pageDosificacionHoraria %}
+{% from 'pages/eventos.html' import pageEventos %}
+{% from 'pages/facultad.html' import pageFacultad %}
 
 {% block body %}
 
@@ -21,19 +25,19 @@
     <nav class="nav">
       <h3 class="menu__title">Gestionar</h3>
       <ul>
-        <li class="tab" tab-target="pageDiplomadosCursosLibres">Diplomados / Cursos</li>
-        <li class="tab">Dosificación horaria profesores</li>
-        <li class="tab">Especialización</li>
+        <li class="tab active" tab-target="pageDiplomadosCursosLibres">Diplomados / Cursos</li>
+        <li class="tab" tab-target="pageDosificacionHoraria">Dosificación horaria profesores</li>
+        <!--<li class="tab">Especialización</li>-->
         <li class="tab">Estudiantes</li>
-        <li class="tab">Eventos</li>
-        <li class="tab">Facultad</li>
+        <li class="tab" tab-target="pageEventos">Eventos</li>
+        <li class="tab" tab-target="pageFacultad">Facultad</li>
         <li class="tab" tab-target="pageFinanciamiento">Financiamiento</li>
-        <li class="tab active" tab-target="pageInvestigaciones">Investigación</li>
-        <li class="tab">Profesor</li>
+        <li class="tab" tab-target="pageInvestigaciones">Investigación</li>
+        <li class="tab" tab-target="pageProfesor">Profesor</li>
         <li class="tab">Publicaciones</li>
         <li class="tab" tab-target="pageUnidadAcademica">Unidad académica</li>
-        <li class="tab">Tesis</li>
-        <li class="tab">Tutores</li>
+        <!--<li class="tab">Tesis</li>-->
+        <!--<li class="tab">Tutores</li>-->
       </ul>
     </nav>
   </aside>
@@ -45,4 +49,8 @@
   {{ pageInvestigaciones() }}
   {{ pageFinanciamiento() }}
   {{ pageUnidadAcademica() }}
+  {{ pageProfesor() }}
+  {{ pageDosificacionHoraria() }}
+  {{ pageEventos() }}
+  {{ pageFacultad() }}
 {% endblock %}

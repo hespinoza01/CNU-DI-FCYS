@@ -1,6 +1,6 @@
 const TABS = {};
 const eventsSubtabs = {
-  'pageUnidadAcademica': function eventsUnidadAcademicaTab(){
+  'pageUnidadAcademica': function (){
     const tableUA = document.getElementById('tableUA'),
           tableTUA = document.getElementById('tableTUA'),
           tableWrapper =  document.querySelector('.table-wrapper');
@@ -19,6 +19,100 @@ const eventsSubtabs = {
       tab.addEventListener('click', e => {
         tableWrapper.innerHTML = tables[e.target.getAttribute('table-target')];
         tableWrapper.style.width = (e.target.getAttribute('table-target') === 'tableUA') ? '60vw' : '';
+      });
+    });
+  },
+
+  'pageFinanciamiento': function () {
+    const tableF = document.getElementById('tableF'),
+      tableFF = document.getElementById('tableFF'),
+      tableWrapper = document.querySelector('.table-wrapper');
+
+    const tables = {
+      [tableF.id]: tableF.innerHTML,
+      [tableFF.id]: tableFF.innerHTML
+    };
+
+    tableF.remove();
+    tableFF.remove();
+
+    Array.from(document.querySelectorAll('.page-nav__tab')).forEach(tab => {
+      if (tab.classList.contains('active')) tableWrapper.innerHTML = tables[tab.getAttribute('table-target')];
+
+      tab.addEventListener('click', e => {
+        tableWrapper.innerHTML = tables[e.target.getAttribute('table-target')];
+      });
+    });
+  },
+
+  'pageInvestigaciones': function () {
+    const tableF = document.getElementById('tableI'),
+      tableFF = document.getElementById('tableTI'),
+      tableOther = document.getElementById('tableOther'),
+      tableWrapper = document.querySelector('.table-wrapper');
+
+    const tables = {
+      [tableF.id]: tableF.innerHTML,
+      [tableFF.id]: tableFF.innerHTML,
+      [tableOther.id]: tableOther.innerHTML
+    };
+
+    tableF.remove();
+    tableFF.remove();
+    tableOther.remove();
+
+    Array.from(document.querySelectorAll('.page-nav__tab')).forEach(tab => {
+      if (tab.classList.contains('active')) tableWrapper.innerHTML = tables[tab.getAttribute('table-target')];
+
+      tab.addEventListener('click', e => {
+        tableWrapper.innerHTML = tables[e.target.getAttribute('table-target')];
+      });
+    });
+  },
+
+  'pageEventos': function () {
+    const tableF = document.getElementById('tableE'),
+      tableFF = document.getElementById('tableTE'),
+      tableET = document.getElementById('tableET'),
+      tableWrapper = document.querySelector('.table-wrapper');
+
+    const tables = {
+      [tableF.id]: tableF.innerHTML,
+      [tableFF.id]: tableFF.innerHTML,
+      [tableET.id]: tableET.innerHTML
+    };
+
+    tableF.remove();
+    tableFF.remove();
+    tableET.remove();
+
+    Array.from(document.querySelectorAll('.page-nav__tab')).forEach(tab => {
+      if (tab.classList.contains('active')) tableWrapper.innerHTML = tables[tab.getAttribute('table-target')];
+
+      tab.addEventListener('click', e => {
+        tableWrapper.innerHTML = tables[e.target.getAttribute('table-target')];
+      });
+    });
+  },
+
+  'pageProfesor': function () {
+    const tableF = document.getElementById('tableP'),
+      tableFF = document.getElementById('tableE'),
+      tableWrapper = document.querySelector('.table-wrapper');
+
+    const tables = {
+      [tableF.id]: tableF.innerHTML,
+      [tableFF.id]: tableFF.innerHTML
+    };
+
+    tableF.remove();
+    tableFF.remove();
+
+    Array.from(document.querySelectorAll('.page-nav__tab')).forEach(tab => {
+      if (tab.classList.contains('active')) tableWrapper.innerHTML = tables[tab.getAttribute('table-target')];
+
+      tab.addEventListener('click', e => {
+        tableWrapper.innerHTML = tables[e.target.getAttribute('table-target')];
       });
     });
   }
@@ -53,7 +147,9 @@ Array.from(document.querySelectorAll('.tab')).forEach(node => {
     prevTab.classList.remove('active');
     nextTab.classList.add('active');
     loadTab(nextTab.getAttribute('tab-target'));
-    eventsSubtabs[nextTab.getAttribute('tab-target')]();
+
+    let callback = eventsSubtabs[nextTab.getAttribute('tab-target')];
+    if(callback) callback();
   });
 });
 

@@ -2,58 +2,215 @@
   <template id="pageInvestigaciones">
     <section class="page">
       <nav class="page-nav">
-        <button class="page-nav__tab active" id="investigacionesTab">Investigaciones</button>
-        <button class="page-nav__tab" id="cursosLibresTab">Políticas</button>
-        <button class="page-nav__tab" id="cursosLibresTab">Normativas</button>
-        <button class="page-nav__tab" id="cursosLibresTab">Líneas de investigación</button>
+        <button class="page-nav__tab active" id="investigacionesTab" table-target="tableI">Investigaciones</button>
+        <button class="page-nav__tab" id="tipoInvestigacionTab" table-target="tableTI">Tipos de investigaciones</button>
+        <button class="page-nav__tab" id="politicasTab" table-target="tableOther">Políticas</button>
+        <button class="page-nav__tab" id="normativasTab" table-target="tableOther">Normativas</button>
+        <button class="page-nav__tab" id="lineasInvestigacionTab" table-target="tableOther">Líneas de investigación</button>
       </nav>
 
       <div class="page-nav__container">
         <button class="btnAddNew btn"></button>
-        <div class="table-wrapper">
+        <div class="table-wrapper"></div>
+
+        <template id="tableI">
           <table>
             <thead>
               <tr>
                 <th>Nombre</th>
+                <th>Estado</th>
+                <th>Tipo de investigación</th>
                 <th>Total</th>
-                <th>M</th>
+                <th>F</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Some name</td>
+                <td>1</td>
+                <td>Lorem ipsum dolor sit amet</td>
                 <td>100</td>
                 <td>50</td>
                 <td><a href="#">editar</a></td>
               </tr>
               <tr>
                   <td>Some name</td>
+                  <td>1</td>
+                  <td>Lorem ipsum dolor sit amet</td>
                   <td>100</td>
                   <td>50</td>
                   <td><a href="#">editar</a></td>
               </tr>
               <tr>
                   <td>Some name</td>
+                  <td>1</td>
+                  <td>Lorem ipsum dolor sit amet</td>
                   <td>100</td>
                   <td>50</td>
                   <td><a href="#">editar</a></td>
               </tr>
               <tr>
                   <td>Some name</td>
+                  <td>1</td>
+                  <td>Lorem ipsum dolor sit amet</td>
                   <td>100</td>
                   <td>50</td>
                   <td><a href="#">editar</a></td>
               </tr>
               <tr>
                   <td>Some name</td>
+                  <td>1</td>
+                  <td>Lorem ipsum dolor sit amet</td>
                   <td>100</td>
                   <td>50</td>
                   <td><a href="#">editar</a></td>
               </tr>
             </tbody>
           </table>
-        </div>
+        </template>
+
+        <template id="tableTI">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            </tbody>
+          </table>
+        </template>
+
+        <template id="tableOther">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet dolor sit amet</td>
+              <td>1</td>
+            </tr>
+            </tbody>
+          </table>
+        </template>
       </div>
     </section>
   </template>

@@ -2,15 +2,19 @@
   <template id="pageFinanciamiento">
     <section class="page">
       <nav class="page-nav">
-        <button class="page-nav__tab active" id="investigacionesTab">Investigaciones</button>
+        <button class="page-nav__tab active" id="financiamientoTab" table-target="tableF">Financiamiento</button>
+        <button class="page-nav__tab" id="fuenteFinanciamiento" table-target="tableFF">Fuente financiamiento</button>
       </nav>
 
       <div class="page-nav__container">
         <button class="btnAddNew btn"></button>
-        <div class="table-wrapper">
+        <div class="table-wrapper"></div>
+
+        <template id="tableF">
           <table>
             <thead>
               <tr>
+                <th>Investigación</th>
                 <th>Fuente</th>
                 <th>Programado C$</th>
                 <th>Ejecutado C$</th>
@@ -20,6 +24,7 @@
             </thead>
             <tbody>
               <tr>
+                <td>Lorem ipsum dolor</td>
                 <td>Presupuesto Estatal</td>
                 <td>0</td>
                 <td>0</td>
@@ -27,6 +32,7 @@
                 <td><a href="#">editar</a></td>
               </tr>
               <tr>
+                <td>Lorem ipsum dolor</td>
                 <td>Ingresos propios</td>
                 <td>0</td>
                 <td>0</td>
@@ -34,6 +40,7 @@
                 <td><a href="#">editar</a></td>
               </tr>
               <tr>
+                <td>Lorem ipsum dolor</td>
                 <td>Cooperación nacional</td>
                 <td>0</td>
                 <td>0</td>
@@ -41,6 +48,7 @@
                 <td><a href="#">editar</a></td>
               </tr>
             <tr>
+              <td>Lorem ipsum dolor</td>
               <td>Cooperación internacional (a)</td>
               <td>0</td>
               <td>0</td>
@@ -49,7 +57,71 @@
             </tr>
             </tbody>
           </table>
-        </div>
+        </template>
+
+        <template id="tableFF">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre fuente</th>
+                <th>Estado</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit</td>
+              <td>1</td>
+              <td><a href="#">editar</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </template>
       </div>
     </section>
   </template>
