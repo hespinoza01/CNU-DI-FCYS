@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 {% from 'pages/diplomadosCursosLibres.html' import pageDiplomadosCursosLibres %}
+{% from 'pages/investigaciones.html' import pageInvestigaciones %}
+{% from 'pages/financiamiento.html' import pageFinanciamiento %}
 
 {% block body %}
 
@@ -18,14 +20,14 @@
     <nav class="nav">
       <h3 class="menu__title">Gestionar</h3>
       <ul>
-        <li class="tab active" tab-target="pageDiplomadosCursosLibres">Diplomados / Cursos</li>
+        <li class="tab" tab-target="pageDiplomadosCursosLibres">Diplomados / Cursos</li>
         <li class="tab">Dosificación horaria profesores</li>
         <li class="tab">Especialización</li>
         <li class="tab">Estudiantes</li>
         <li class="tab">Eventos</li>
         <li class="tab">Facultad</li>
-        <li class="tab">Financiamiento</li>
-        <li class="tab">Investigación</li>
+        <li class="tab" tab-target="pageFinanciamiento">Financiamiento</li>
+        <li class="tab active" tab-target="pageInvestigaciones">Investigación</li>
         <li class="tab">Profesor</li>
         <li class="tab">Publicaciones</li>
         <li class="tab">Unidad académica</li>
@@ -39,4 +41,6 @@
 
 
   {{ pageDiplomadosCursosLibres() }}
+  {{ pageInvestigaciones() }}
+  {{ pageFinanciamiento() }}
 {% endblock %}

@@ -4,7 +4,7 @@
   --secondary: #003485;
   --secondary-variant: #001862;
   --secondary-alpha: rgba(0, 52, 133, .20);
-  --secondary-alpha-variant: rgba(0, 52, 133, .1);
+  --secondary-alpha-variant: rgba(201, 201, 0, .25); /*rgba(0, 52, 133, .1);*/
 
   --text: #7F868B;
   --text-variant: #595959;
