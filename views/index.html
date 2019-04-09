@@ -2,6 +2,7 @@
 {% from 'pages/diplomadosCursosLibres.html' import pageDiplomadosCursosLibres %}
 {% from 'pages/investigaciones.html' import pageInvestigaciones %}
 {% from 'pages/financiamiento.html' import pageFinanciamiento %}
+{% from 'pages/unidadAcademica.html' import pageUnidadAcademica %}
 
 {% block body %}
 
@@ -30,7 +31,7 @@
         <li class="tab active" tab-target="pageInvestigaciones">Investigación</li>
         <li class="tab">Profesor</li>
         <li class="tab">Publicaciones</li>
-        <li class="tab">Unidad académica</li>
+        <li class="tab" tab-target="pageUnidadAcademica">Unidad académica</li>
         <li class="tab">Tesis</li>
         <li class="tab">Tutores</li>
       </ul>
@@ -43,4 +44,5 @@
   {{ pageDiplomadosCursosLibres() }}
   {{ pageInvestigaciones() }}
   {{ pageFinanciamiento() }}
+  {{ pageUnidadAcademica() }}
 {% endblock %}
